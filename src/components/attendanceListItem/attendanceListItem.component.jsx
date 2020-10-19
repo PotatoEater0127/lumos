@@ -8,6 +8,12 @@ import Avatar from "@material-ui/core/Avatar";
 import ImageIcon from "@material-ui/icons/Image";
 import WorkIcon from "@material-ui/icons/Work";
 import BeachAccessIcon from "@material-ui/icons/BeachAccess";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
+import {
+  Typography,
+  ListItemSecondaryAction,
+  IconButton,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     margin: "0 auto",
   },
+  subTitle: {
+    color: theme.palette.text.secondary,
+    fontSize: "0.875rem"
+  }
 }));
 
 export default function FolderList() {
@@ -24,24 +34,47 @@ export default function FolderList() {
     <List className={classes.root}>
       <ListItem button>
         <ListItemAvatar>
-          <Avatar>
-            <ImageIcon />
-          </Avatar>
+          <Typography align="center">7</Typography>
+          <Typography align="center">周一</Typography>
         </ListItemAvatar>
         <ListItemText
           primary={
             <>
-              協勤 <span style={{ fontSize: "0.875rem" }}>光明分隊</span>
+              協勤
+              <Typography className={classes.subTitle}>光明分隊</Typography>
             </>
           }
-          secondary="Jan 7, 2014  /  18:30 - 22:00"
+          secondary="18:30 - 22:00"
         />
+        <ListItemSecondaryAction>
+          <IconButton edge="end" aria-label="delete">
+            <MoreHorizIcon />
+          </IconButton>
+        </ListItemSecondaryAction>
       </ListItem>
       <ListItem button>
         <ListItemAvatar>
-          <Avatar>
-            <WorkIcon />
-          </Avatar>
+          <Typography align="center">14</Typography>
+          <Typography align="center">周一</Typography>
+        </ListItemAvatar>
+        <ListItemText
+          primary={
+            <>
+              <span>協勤 </span>
+            </>
+          }
+          secondary="光明分隊 18:30 - 22:00"
+        />
+        <ListItemSecondaryAction>
+          <IconButton edge="end" aria-label="delete">
+            <MoreHorizIcon />
+          </IconButton>
+        </ListItemSecondaryAction>
+      </ListItem>
+      <ListItem button>
+        <ListItemAvatar>
+          <Typography align="center">11</Typography>
+          <Typography align="center">周五</Typography>
         </ListItemAvatar>
         <ListItemText
           primary={
@@ -50,58 +83,57 @@ export default function FolderList() {
               <span style={{ fontSize: "0.875rem" }}>光明分隊</span>
             </>
           }
-          secondary="Jan 7, 2014  /  18:30 - 22:00"
+          secondary="18:30 - 22:00"
         />
+        <ListItemSecondaryAction>
+          <IconButton edge="end" aria-label="delete">
+            <MoreHorizIcon />
+          </IconButton>
+        </ListItemSecondaryAction>
       </ListItem>
       <ListItem button>
         <ListItemAvatar>
-          <Avatar>
-            <BeachAccessIcon />
-          </Avatar>
+          <Typography align="center">21</Typography>
+          <Typography align="center">周一</Typography>
         </ListItemAvatar>
         <ListItemText
-          primary="分隊常訓"
-          secondary="Jan 7, 2014  /  18:30 - 22:00"
+          primary={
+            <>
+              <span>協勤 </span>
+              <span style={{ fontSize: "0.875rem" }}>石牌分隊</span>
+            </>
+          }
+          secondary="18:30 - 22:00"
         />
+        <ListItemSecondaryAction>
+          <IconButton edge="end" aria-label="delete">
+            <MoreHorizIcon />
+          </IconButton>
+        </ListItemSecondaryAction>
       </ListItem>
       <ListItem button>
         <ListItemAvatar>
-          <Avatar>
-            <ImageIcon />
-          </Avatar>
+          <Typography align="center">14</Typography>
+          <Typography align="center">周一</Typography>
         </ListItemAvatar>
-        <ListItemText
-          primary="協勤"
-          secondary="Jan 7, 2014  /  18:30 - 22:00"
-        />
+        <ListItemText primary="大隊常訓" secondary="18:30 - 22:00" />
+        <ListItemSecondaryAction>
+          <IconButton edge="end" aria-label="delete">
+            <MoreHorizIcon />
+          </IconButton>
+        </ListItemSecondaryAction>
       </ListItem>
       <ListItem button>
         <ListItemAvatar>
-          <Avatar>
-            <WorkIcon />
-          </Avatar>
+          <Typography align="center">14</Typography>
+          <Typography align="center">周一</Typography>
         </ListItemAvatar>
-        <ListItemText
-          primary="大隊常訓"
-          secondary="Jan 7, 2014  /  18:30 - 22:00"
-        />
+        <ListItemText primary="防宣" secondary="18:30 - 22:00" />
       </ListItem>
       <ListItem button>
         <ListItemAvatar>
-          <Avatar>
-            <BeachAccessIcon />
-          </Avatar>
-        </ListItemAvatar>
-        <ListItemText
-          primary="防宣"
-          secondary="Jan 7, 2014  /  18:30 - 22:00"
-        />
-      </ListItem>
-      <ListItem button>
-        <ListItemAvatar>
-          <Avatar>
-            <ImageIcon />
-          </Avatar>
+          <Typography align="center">14</Typography>
+          <Typography align="center">周一</Typography>
         </ListItemAvatar>
         <ListItemText
           primary="Photos"
@@ -110,9 +142,8 @@ export default function FolderList() {
       </ListItem>
       <ListItem button>
         <ListItemAvatar>
-          <Avatar>
-            <WorkIcon />
-          </Avatar>
+          <Typography align="center">14</Typography>
+          <Typography align="center">周一</Typography>
         </ListItemAvatar>
         <ListItemText
           primary="Work"
@@ -121,9 +152,8 @@ export default function FolderList() {
       </ListItem>
       <ListItem button>
         <ListItemAvatar>
-          <Avatar>
-            <BeachAccessIcon />
-          </Avatar>
+          <Typography align="center">14</Typography>
+          <Typography align="center">周一</Typography>
         </ListItemAvatar>
         <ListItemText
           primary="Vacation"
