@@ -23,39 +23,19 @@ const useStyles = makeStyles((theme) => ({
   },
   subTitle: {
     color: theme.palette.text.secondary,
-    fontSize: "0.875rem"
-  }
+    fontSize: "0.875rem",
+  },
 }));
 
 export default function FolderList() {
   const classes = useStyles();
-
   return (
     <List className={classes.root}>
       <ListItem button>
         <ListItemAvatar>
-          <Typography align="center">7</Typography>
-          <Typography align="center">周一</Typography>
-        </ListItemAvatar>
-        <ListItemText
-          primary={
-            <>
-              協勤
-              <Typography className={classes.subTitle}>光明分隊</Typography>
-            </>
-          }
-          secondary="18:30 - 22:00"
-        />
-        <ListItemSecondaryAction>
-          <IconButton edge="end" aria-label="delete">
-            <MoreHorizIcon />
-          </IconButton>
-        </ListItemSecondaryAction>
-      </ListItem>
-      <ListItem button>
-        <ListItemAvatar>
-          <Typography align="center">14</Typography>
-          <Typography align="center">周一</Typography>
+          <div> <Typography align="center">14</Typography>
+          <Typography align="center">周一</Typography></div>
+         
         </ListItemAvatar>
         <ListItemText
           primary={
@@ -73,8 +53,10 @@ export default function FolderList() {
       </ListItem>
       <ListItem button>
         <ListItemAvatar>
-          <Typography align="center">11</Typography>
-          <Typography align="center">周五</Typography>
+          <div>
+            <Typography align="center">11</Typography>
+            <Typography align="center">周五</Typography>
+          </div>
         </ListItemAvatar>
         <ListItemText
           primary={
@@ -93,8 +75,10 @@ export default function FolderList() {
       </ListItem>
       <ListItem button>
         <ListItemAvatar>
-          <Typography align="center">21</Typography>
-          <Typography align="center">周一</Typography>
+          <div>
+            <Typography align="center">21</Typography>
+            <Typography align="center">周一</Typography>
+          </div>
         </ListItemAvatar>
         <ListItemText
           primary={
@@ -152,8 +136,10 @@ export default function FolderList() {
       </ListItem>
       <ListItem button>
         <ListItemAvatar>
-          <Typography align="center">14</Typography>
-          <Typography align="center">周一</Typography>
+          <div>
+            <Typography align="center">14</Typography>
+            <Typography align="center">周一</Typography>
+          </div>
         </ListItemAvatar>
         <ListItemText
           primary="Vacation"

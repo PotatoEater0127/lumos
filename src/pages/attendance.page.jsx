@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { DatePicker } from "@material-ui/pickers";
 import FolderList from "../components/attendanceListItem/attendanceListItem.component";
 
-export default function AttendancePage() {
+export default function AttendancePage(props) {
   const [selectedDate, setSelectedDate] = useState(new Date());
   return (
     <>
-      <DatePicker
+      {/* <DatePicker
         autoOk={true}
         okLabel=""
         cancelLable="取消"
@@ -15,7 +15,7 @@ export default function AttendancePage() {
         views={["year", "month"]}
         value={selectedDate}
         onChange={setSelectedDate}
-      />
+      /> */}
       <FolderList />
     </>
   );

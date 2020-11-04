@@ -8,24 +8,27 @@ import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import zhTW from "dayjs/locale/zh-tw";
 import DayjsUtils from "@date-io/dayjs";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { Paper } from "@material-ui/core";
+import history from "./history";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
 function App() {
   return (
-    <MuiPickersUtilsProvider utils={DayjsUtils} locale={zhTW}>
-      <CssBaseline />
-      <div className="App">
-        <TopNav />
-        {/* <Paper> */}
+    <Router history={history}>
+      <MuiPickersUtilsProvider utils={DayjsUtils} locale={zhTW}>
+        <CssBaseline />
+        <div className="App">
+          <TopNav />
           {/* to adjust space for the appbar's offset */}
           <div style={{ height: "56px" }} />
-          {/* <AttendancePage /> */}
-          <ConfigurationPage />
-        {/* </Paper> */}
-        <CheckInButton />
-        <BottomNav />
-      </div>
-    </MuiPickersUtilsProvider>
+          <Switch>
+            <Route path="/config" component={ConfigurationPage} />
+            <Route path="/" component={AttendancePage} />
+          </Switch>
+          <CheckInButton />
+          <BottomNav />
+        </div>
+      </MuiPickersUtilsProvider>
+    </Router>
   );
 }
 
