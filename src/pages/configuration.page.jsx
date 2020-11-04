@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
   flexWrapper: {
     display: "flex",
     flexDirection: "column",
-    padding: "0 15px"
+    padding: "0 15px",
+    marginTop: "15px"
   }
 }));
 
@@ -47,9 +48,9 @@ export default function ConfigurationPage() {
             }}
           >
             <option aria-label="None" value="" />
-            <option value={10}>Ten</option>
-            <option value={20}>Twenty</option>
-            <option value={30}>Thirty</option>
+            <option value={"石牌分隊"}>石牌分隊</option>
+            <option value={"光明分隊"}>光明分隊</option>
+            <option value={"其他"}>其他</option>
           </Select>
         </FormControl>
         <FormControl variant="outlined" margin="normal">
@@ -65,9 +66,9 @@ export default function ConfigurationPage() {
             }}
           >
             <option aria-label="None" value="" />
-            <option value={10}>Ten</option>
-            <option value={20}>Twenty</option>
-            <option value={30}>Thirty</option>
+            <option value={91}>91</option>
+            <option value={92}>92</option>
+            <option value={"其他"}>其他</option>
           </Select>
         </FormControl>
         <FormControl variant="outlined" margin="normal">
