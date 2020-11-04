@@ -15,7 +15,6 @@ const useStyles = makeStyles({
 export default function BottomNav() {
   const classes = useStyles();
   const history = useHistory();
-  console.log(history);
   const [curValue, setCurValue] = useState(0);
   return (
     <BottomNavigation

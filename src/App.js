@@ -8,9 +8,10 @@ import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import zhTW from "dayjs/locale/zh-tw";
 import DayjsUtils from "@date-io/dayjs";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import history from "./history";
+import { createBrowserHistory } from "history";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 
+const history = createBrowserHistory();
 function App() {
   return (
     <Router history={history}>
