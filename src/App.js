@@ -2,7 +2,7 @@ import React from "react";
 import BottomNav from "./components/bottom-nav/bottom-nav.component";
 import TopNav from "./components/top-nav/top-nav.component";
 import CheckInButton from "./components/checkin-button/checkin-button.component";
-import AttendancePage from "./pages/attendance.page";
+import AttendancePageList from "./pages/attendanceList.page";
 import ConfigurationPage from "./pages/configuration.page";
 import { MuiPickersUtilsProvider } from "@material-ui/pickers";
 import zhTW from "dayjs/locale/zh-tw";
@@ -23,7 +23,7 @@ function App() {
           <div style={{ height: "56px" }} />
           <Switch>
             <Route path="/config" component={ConfigurationPage} />
-            <Route path="/" component={AttendancePage} />
+            <Route path="/" component={AttendancePageList} />
           </Switch>
           <CheckInButton />
           <BottomNav />

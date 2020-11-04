@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { DatePicker } from "@material-ui/pickers";
 import FolderList from "../components/attendanceListItem/attendanceListItem.component";
 
-export default function AttendancePage(props) {
+export default function AttendanceListPage(props) {
   const [selectedDate, setSelectedDate] = useState(new Date());
   return (
     <>

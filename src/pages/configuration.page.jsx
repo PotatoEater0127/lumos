@@ -103,6 +103,5 @@ export default function ConfigurationPage() {
         </FormControl>
       </div>
     </form>
-  
   );
 }
