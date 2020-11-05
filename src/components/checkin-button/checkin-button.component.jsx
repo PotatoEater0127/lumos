@@ -13,13 +13,14 @@ const useStyles = makeStyles({
   },
 });
 
-export default function CheckInButton() {
+export default function CheckInButton(props) {
   const classes = useStyles();
   return (
     <Fab
       className={classes.stickToBottomMiddle}
       color="primary"
       aria-label="checkIn"
+      onClick={props.onClick}
     >
       <Edit />
     </Fab>
